@@ -1,0 +1,16 @@
+.user-profile {
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+}
+
+.user-profile * {
+      margin: 15px 0;
+}
+
+.user-profile .button {
+      text-align: center;      
+}
+

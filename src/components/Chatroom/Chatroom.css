@@ -1,0 +1,29 @@
+.chatroom {
+      height: 100vh;
+      width: 100%;
+      margin: auto;
+      padding: 1rem 0;
+  
+      /* background: var(--dark-purple); */
+  }
+  
+  .chatroom__messages {
+      padding: 5px 0;
+  }
+  
+  .chatroom__message {
+      display: block;
+      width: auto;
+      padding: 12px;
+      margin: 5px 0;
+  
+      background: var(--light-purple);
+  
+      list-style: none;
+  }
+
+  .chatroom__message:hover {
+      background: var(--very-light-purple);
+  }
+
+

@@ -1,23 +1,39 @@
-import logo from './logo.svg';
+import React, { useState, useEffect, useContext } from 'react';
+
+// STYLES
 import './App.css';
 
+// COMPONENTS
+import { Header } from "./components/Header/index";
+import { Chatroom } from "./components/Chatroom/index";
+import { Profile } from './components/Profile';
+
+// CONTEXT
+import { AuthContext } from './context/AuthContext';
+
+// REACT ROUTER DOM
+import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
+
 function App() {
+  const { user, handleAuthStateChange, handleSignIn, handleSignInWithPopup, handleSignOut } = useContext(AuthContext);
+
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={`App`}>
+
+      <Router>
+
+        <Header />
+
+        <div className="container">
+            <Switch>
+              <Route exact path="/"  component={Chatroom}/>
+              <Route exact path="/profile/:id"  component={Profile}/>
+            </Switch>
+        </div>
+      </Router>
+
     </div>
   );
 }

@@ -1,0 +1,36 @@
+.form {
+    position: fixed;
+    width: 70%;
+    padding: 1rem 0;
+    margin: auto;
+    bottom: 0;   
+}
+
+.form-control {
+    width: 70%;
+    padding: 12px;
+
+    border: 1px solid #000;
+    outline: none;
+}
+
+.form-control--submit {
+    width: 30%;
+    min-width: 150px;
+
+    border: 1px solid var(--light-purple);
+    background: var(--light-purple);
+    color: #fff;
+    cursor: pointer;
+}
+
+.form-control--submit:hover {
+    border: 1px solid #fff;
+}
+
+
+@media screen and (max-width: 715px) {
+    .form {
+            width: 100%;
+    }
+}
