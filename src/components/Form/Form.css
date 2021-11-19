@@ -16,7 +16,7 @@
 
 .form-control--submit {
     width: 30%;
-    min-width: 150px;
+    /* min-width: 150px; */
 
     border: 1px solid var(--light-purple);
     background: var(--light-purple);

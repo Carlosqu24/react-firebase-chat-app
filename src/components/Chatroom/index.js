@@ -34,15 +34,15 @@ export const Chatroom = () => {
                               <ul className="chatroom__messages">
                                     {
                                           messages.map(message => (
-                                                <li 
-                                                      className="chatroom__message"
+                                                <li
+                                                      className={`chatroom-message ${message.email == user.email ? 'your-message' : ''}`}
                                                       key={message.id}
-                                                >{formatTimestampToHours(message.timestamp)} - {message.email}: {message.message}</li>
+                                                ><p className="chatroom-message__text">{message.message}</p> <span className="chatroom-message__time">{formatTimestampToHours(message.timestamp)}</span></li>            
                                           ))
                                     }
                               </ul>
                         ) : (
-                              <h2>No esta logueado</h2>
+                              <h2>You are not logged</h2>
                         )
                   }
 
