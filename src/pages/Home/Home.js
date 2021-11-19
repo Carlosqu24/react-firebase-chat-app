@@ -1,12 +1,13 @@
 import React from 'react'
+import { Chatroom } from '../../components/Chatroom'
 
 // STYLES
 import './Home.css'
 
 export const Home = () => {
       return (
-            <>
-                  <h2 className="title">No tienes acceso</h2>
-            </>
+            <div className="home">
+                  <Chatroom />
+            </div>
       )
 }

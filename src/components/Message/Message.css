@@ -1,0 +1,70 @@
+.chatroom-message {
+      width: auto;
+      padding: 10px;
+      margin: 5px 0;
+    
+      background: var(--light-purple);
+      color: #fff;
+    
+      list-style: none;
+  
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+  }
+    
+  .chatroom-message * {
+       margin-right: 10px;
+  }
+  
+  .chatroom-message__time {
+      margin-right: 0;
+  }
+  
+  .chatroom-message:hover {
+      background: var(--very-light-purple);
+  }
+  
+  .your-message {
+      align-self: flex-end;
+  
+      background: rgb(137, 105, 211);
+  }
+  
+  .your-message:hover {
+      background: rgba(137, 105, 211, 0.582);
+  }
+  
+  .chatroom-message--light-theme {
+        background: rgb(201, 201, 201);
+        color: #000;
+  }
+
+  .chatroom-message--light-theme:hover {
+      background: rgba(201, 201, 201, 0.507);
+}
+
+.chatroom-message--light-theme.your-message{
+      background: rgb(23, 21, 121);
+      color: #fff;
+}
+
+.chatroom-message--light-theme.your-message:hover {
+    background: rgba(23, 21, 121, 0.411);
+}
+
+  .chatroom-message--dark-theme {
+      background: rgb(44, 44, 44);
+}
+
+.chatroom-message--dark-theme:hover {
+      background: rgba(44, 44, 44, 0.493);
+}
+
+.chatroom-message--dark-theme.your-message {
+      background: rgb(74, 40, 102);
+}
+
+.chatroom-message--dark-theme.your-message:hover {
+      background: rgba(74, 40, 102, 0.507);
+}

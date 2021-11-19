@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useContext } from 'react';
 
 // STYLES
 import './App.css';
@@ -8,32 +8,30 @@ import { Header } from "./components/Header/index";
 import { Chatroom } from "./components/Chatroom/index";
 import { Profile } from './components/Profile';
 
-// CONTEXT
-import { AuthContext } from './context/AuthContext';
+
+
+import { ThemeContext } from './context/ThemeContext';
 
 // REACT ROUTER DOM
-import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
-  const { user, handleAuthStateChange, handleSignIn, handleSignInWithPopup, handleSignOut } = useContext(AuthContext);
-
-
+  
+  const { theme } = useContext(ThemeContext);
 
   return (
-    <div className={`App`}>
+    <div className={`App ${theme}`}>
 
       <Router>
-
         <Header />
 
-        <div className="container">
+          <div className="container">
             <Switch>
               <Route exact path="/"  component={Chatroom}/>
               <Route exact path="/profile/:id"  component={Profile}/>
             </Switch>
-        </div>
+          </div>
       </Router>
-
     </div>
   );
 }

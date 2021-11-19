@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react'
+import React, { useContext } from 'react'
 
 // STYLES
 import "./Header.css"
@@ -9,10 +9,7 @@ import { AuthContext } from '../../context/AuthContext';
 import { Link } from 'react-router-dom';{}
 
 export const Header = () => {
-
-      let { user, handleAuthStateChange, handleSignIn, handleSignInWithPopup, handleSignOut } = useContext(AuthContext);
-
-
+      let { user, handleSignInWithPopup, handleSignOut } = useContext(AuthContext);
 
       return (
             <header className="header">

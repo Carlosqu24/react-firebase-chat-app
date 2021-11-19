@@ -1,55 +1,9 @@
 .chatroom {
-      height: 100vh;
-      width: 100%;
-      margin: auto;
-      padding: 1rem 0;
+    height: 100vh;
+    width: 100%;
+    margin: auto;
+    padding: 1rem 0;
+}
+
+
   
-      /* background: var(--dark-purple); */
-  }
-  
-  .chatroom__messages {
-      padding: 5px 0;
-
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      justify-content: center;
-  }
-  
-  .chatroom-message {
-      /* display: inline; */
-      /* width: 50%; */
-      width: auto;
-      padding: 10px;
-      margin: 5px 0;
-  
-      background: var(--light-purple);
-  
-      list-style: none;
-
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-  }
-  
-  .chatroom-message * {
-      margin-right: 10px;
-  }
-
-  .chatroom-message__time {
-    margin-right: 0;
-  }
-
-  .chatroom-message:hover {
-      background: var(--very-light-purple);
-  }
-
-  .your-message {
-    align-self: flex-end;
-
-    background: rgb(137, 105, 211);
-  }
-
-  .your-message:hover {
-      background: rgba(137, 105, 211, 0.582);
-  }
