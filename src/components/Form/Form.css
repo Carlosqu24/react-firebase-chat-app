@@ -16,17 +16,19 @@
 
 .form-control--submit {
     width: 30%;
-    /* min-width: 150px; */
-
-    border: 1px solid var(--light-purple);
-    background: var(--light-purple);
+    
+    background: #000;
     color: #fff;
     cursor: pointer;
 }
 
 .form-control--submit:hover {
-    border: 1px solid #fff;
+    background: rgba(0, 0, 0, 0.356);
 }
+
+/* .form-control--submit.dark-theme{
+    background: rgb(202, 87, 87);
+} */
 
 
 @media screen and (max-width: 715px) {

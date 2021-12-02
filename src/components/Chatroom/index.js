@@ -1,10 +1,10 @@
-import React from 'react'
+import React, { useContext } from 'react'
 
 // STYLES
 import "./Chatroom.css"
 
 // HOOKS
-import { useMessages } from '../../hooks/useMessages.js'
+import { AuthContext } from '../../context/AuthContext';
 
 // COMPONENTS
 import { Form } from '../Form/index';
@@ -12,8 +12,7 @@ import { Messages } from '../Messages';
 
 
 export const Chatroom = () => {
-
-      const { user } = useMessages()
+      const { user } = useContext(AuthContext)
 
 
       return (

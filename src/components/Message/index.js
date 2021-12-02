@@ -2,13 +2,13 @@ import React, { useContext } from 'react'
 
 import './Message.css'
 
+import { AuthContext } from '../../context/AuthContext';
 import { ThemeContext } from '../../context/ThemeContext';
 
 import { useMessages } from '../../hooks/useMessages.js'
 
 export const Message = ({ message }) => {
-      const { user } = useMessages();
-
+      const { user } = useContext(AuthContext)
       const { theme } = useContext(ThemeContext);
 
       const formatTimestampToHours = (timestamp) => {

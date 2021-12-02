@@ -1,5 +1,6 @@
 .user-profile {
-      height: 100vh;
+      /* height: 100vh; */
+      min-height: 100vh;
 
       display: flex;
       flex-direction: column;
@@ -9,9 +10,63 @@
 
 .user-profile * {
       margin: 15px 0;
+      margin: 35px 0;
 }
 
 .user-profile .button {
       text-align: center;      
 }
 
+.themes {
+      width: 100%;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+}
+
+.theme-item {
+      width: 300px;
+      width: 30%;
+      padding: 1rem;
+      border: 2px solid transparent;
+
+      background: #000;
+      color: white;
+
+      text-align: center;
+
+      cursor: pointer;
+}
+
+.theme-item:hover {
+      border: 2px solid #fff;
+}
+
+.theme-item--selected {
+      border: 2px solid rgb(25, 0, 255);
+      
+      background: rgb(28, 31, 78);
+      color: rgb(255, 255, 255);
+}
+
+.theme-item--selected:hover {
+      border: 2px solid rgb(25, 0, 255);
+      
+      background: rgb(21, 29, 131);
+}
+
+.theme-input {
+      margin-right: 20px;
+}
+
+
+@media screen and (max-width: 600px) {
+      .themes {
+            flex-direction: column;
+      }
+
+      .theme-group {
+            width: 50%;
+      }
+}

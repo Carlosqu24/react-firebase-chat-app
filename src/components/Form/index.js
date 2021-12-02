@@ -3,9 +3,11 @@ import React, { useState, useContext } from 'react'
 // STYLES
 import './Form.css'
 
+// CONTEXT
 import { AuthContext } from "../../context/AuthContext"
-import { ref, set } from 'firebase/database';
-import { db } from '../../firebase';
+
+// HOOKS
+import { useMessages } from "../../hooks/useMessages" 
 
 export const Form = () => {
       const [form, setForm] = useState({
@@ -14,18 +16,14 @@ export const Form = () => {
 
       const { user } = useContext(AuthContext)
 
+      const { addMessage } = useMessages()
+
       const handleInputChange = (e) => {
             setForm({
                   ...form,
                   [e.target.name]: e.target.value
             });
       }
-
-      function writeUserData(message) {
-            message.timestamp = Date.now();
-
-            set(ref(db, 'messages/' + message.id), message)
-      };
 
       const handleSubmit = (e) => {
             e.preventDefault();
@@ -40,7 +38,7 @@ export const Form = () => {
 
             setForm({message: ""});
 
-            writeUserData(newMessage)            
+            addMessage(newMessage);  
       };
 
 
@@ -57,7 +55,7 @@ export const Form = () => {
 
             <input
                   type="submit"
-                  className="form-control form-control--submit"
+                  className={`form-control form-control--submit`}
                   value="Send Message"
             />
       </form>
