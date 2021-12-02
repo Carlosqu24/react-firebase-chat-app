@@ -40,13 +40,17 @@ export const Profile = () => {
                   <img src={user.photoURL} alt="" />
 
                   <div className="themes">
-                        {
-                              themes.map(item =>(
-                                    <button className={`theme-item ${theme == item.name && "theme-item--selected"}`} id={item.name} onClick={(e) => handleTheme(e)} key={item.id}>
-                                          {item.title}
-                                    </button>
-                              ))
-                        }
+                        <h2>Themes</h2>
+
+                        <div className="themes-container">
+                              {
+                                    themes.map(item =>(
+                                          <button className={`theme-item ${theme == item.name && "theme-item--selected"}`} id={item.name} onClick={(e) => handleTheme(e)} key={item.id}>
+                                                {item.title}
+                                          </button>
+                                    ))
+                              }
+                        </div>
                   </div>
 
                   <Link to="/"  className="button">Go to Chatroom</Link>

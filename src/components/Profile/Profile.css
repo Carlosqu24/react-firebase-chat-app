@@ -9,8 +9,7 @@
 }
 
 .user-profile * {
-      margin: 15px 0;
-      margin: 35px 0;
+      margin: 10px 0;
 }
 
 .user-profile .button {
@@ -20,6 +19,10 @@
 .themes {
       width: 100%;
 
+      
+}
+
+.themes-container {
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -62,11 +65,13 @@
 
 
 @media screen and (max-width: 600px) {
-      .themes {
+      .themes-container {
+            width: 100%;
+
             flex-direction: column;
       }
 
-      .theme-group {
-            width: 50%;
+      .theme-item {
+            width: 100%;
       }
 }
